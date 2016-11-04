@@ -21,3 +21,25 @@ docker logs -f cti3-es-indexer
 
 #Run docker container (detached)
 docker run --name cti3-es-indexer -d nos/cti3-es-indexer
+
+
+
+...DockerFile...
+
+FROM mhart/alpine-node:6.9.1
+
+MAINTAINER NOS Inovação SA
+
+ARG GIT_COMMIT=0
+
+ENV GIT_COMMIT $GIT_COMMIT
+
+ADD . /cti3-es-indexer/
+
+WORKDIR cti3-es-indexer
+
+RUN npm install
+RUN GIT_COMMIT=$GIT_COMMIT npm run build
+RUN npm prune
+
+CMD ["npm", "start"]
