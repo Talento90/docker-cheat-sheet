@@ -7,7 +7,7 @@ An image is a filesystem and parameters to use at runtime. It is **stateless** a
 
 * **build docker image**
 
-   _docker build --build-arg ARG_NAME=ARG_VALUE  dockerfilePath -t <company>/<project-name>:<tag> -t company/core-project:latest_
+   _docker build --build-arg ARG_NAME=ARG_VALUE  dockerfilePath -t company/project-name:tag_
 
 * **get all docker images**
 
