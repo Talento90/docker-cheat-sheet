@@ -9,17 +9,17 @@ An image is a filesystem and parameters to use at runtime. It is **stateless** a
 
 docker build --build-arg ARG_NAME=ARG_VALUE  dockerfilePath -t <company>/<project-name>:<tag> -t company/core-project:latest
 
-**get all docker images**
+* **get all docker images**
 
-docker images
+   _docker images_
 
-**remove docker image**
+* **remove docker image**
 
-docker rmi node
+   _docker rmi node_
 
-**delete all docker images**
+* **delete all docker images**
 
-docker rmi $(docker images -q)
+   _docker rmi $(docker images -q)_
 
 
 docker containers
@@ -27,38 +27,38 @@ docker containers
 A container is a running **instance** of an image. 
 
 
-**run container (detached)**
+* **run container (detached)**
 
-docker run --name container-name -d <company>/<image-name>:<tag>
+   _docker run --name container-name -d <company>/<image-name>:<tag>_
 
-**stop container by id or name**
+* **stop container by id or name**
 
-docker stop container-name
+   _docker stop container-name_
 
-**get running containers**
+* **get running containers**
 
-docker ps
+   _docker ps_
 
-**get all containers**
+* **get all containers**
 
-docker ps -a
+   _docker ps -a_
 
-**delete all docker containers**
+* **delete all docker containers**
 
-docker rm $(docker ps -a -q)
+   _docker rm $(docker ps -a -q)_
 
-**enter in some container**
+* **enter in some container**
 
-docker exec -it container-name sh
+   _docker exec -it container-name sh_
 
-**tail container logs**
+* **tail container logs**
 
-docker logs -f container-name
+   _docker logs -f container-name_
 
 
 dockerfile resources
 --------------------
 
-**install git**
+* **install git**
 
-apk add --no-cache git
+   _apk add --no-cache git_
