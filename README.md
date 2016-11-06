@@ -1,47 +1,52 @@
-# docker-cheat-sheet
+#docker-cheat-sheet
 
-#remove docker image
-docker rmi node
 
-#delete all docker containers
-docker rm $(docker ps -a -q)
+docker images
+-------------
+An image is a filesystem and parameters to use at runtime. It is **stateless** and **never changes**.
 
-#delete all docker images
-docker rmi $(docker images -q)
+**build docker image**
+docker build --build-arg ARG_NAME=ARG_VALUE  dockerfilePath -t <company>/<project-name>:<tag> -t company/core-project:latest
 
-#Build docker image
-docker build --build-arg HTTP_PROXY=ARG_VALUE  . -t nos/cti3-es-indexer:1.0.0 -t nos/cti3-es-indexer:latest
-params:<repo-user>/project:tag
-
-#Get all docker images
+**get all docker images**
 docker images
 
-#Get all containers
+**remove docker image**
+docker rmi node
+
+**delete all docker images**
+docker rmi $(docker images -q)
+
+
+docker containers
+-----------------
+A container is a running **instance** of an image. 
+
+
+**run container (detached)**
+docker run --name container-name -d <company>/<image-name>:<tag>
+
+**stop container by id or name**
+docker stop container-name
+
+**get running containers**
+docker ps
+
+**get all containers**
 docker ps -a
 
-#Stop container by id or name
-docker stop container_name
+**delete all docker containers**
+docker rm $(docker ps -a -q)
 
-#Enter in some container
-docker exec -it cti3-es-indexer sh
+**enter in some container**
+docker exec -it container-name sh
 
-#Tail container logs
-docker logs -f cti3-es-indexer
-
-#Run docker container (detached)
-docker run --name cti3-es-indexer -d nos/cti3-es-indexer
+**tail container logs**
+docker logs -f container-name
 
 
+dockerfile resources
+--------------------
 
-GET GIT
+**install git**
 apk add --no-cache git
-
-
-#Passing arguments and Enviroment variables
-ARG KAFKA_VERSION=0.10.1.0
-ARG SCALA_VERSION=2.11
-
-RUN apk add --update unzip wget curl docker jq coreutils
-
-ENV KAFKA_VERSION $KAFKA_VERSION
-ENV SCALA_VERSION $SCALA_VERSION
