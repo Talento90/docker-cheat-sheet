@@ -1,0 +1,23 @@
+FROM mhart/alpine-node:6.9.1
+
+MAINTAINER Talent90
+
+# create a specific user to run this container
+RUN adduser -S -D app
+
+# add files to container
+ADD . /project-name
+
+# specify the working directory
+WORKDIR project-name
+
+# build process
+RUN npm install
+RUN npm run build
+RUN npm prune
+
+# run the container using a specific user
+USER app
+
+# run application
+CMD ["npm", "start"]
