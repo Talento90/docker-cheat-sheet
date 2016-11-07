@@ -3,7 +3,7 @@
 
 docker images
 -------------
-An image is a filesystem and parameters to use at runtime. It is **stateless** and **never changes**.
+A Docker image is a **read-only** and **stateless** template with instructions for creating a Docker container.
 
 * **build docker image**
 
@@ -24,12 +24,12 @@ An image is a filesystem and parameters to use at runtime. It is **stateless** a
 
 docker containers
 -----------------
-A container is a running **instance** of an image. 
+A Docker container is a **runnable instance** of a Docker image.
 
 
 * **run container (detached)**
 
-   _docker run --name container-name -d <company>/<image-name>:<tag>_
+   _docker run --name container-name -d company/image-name:tag_
 
 * **stop container by id or name**
 
