@@ -61,4 +61,4 @@ dockerfile resources
 
 * **install git**
 
-   _apk add --no-cache git_
+   alpine: _apk add --no-cache git_
