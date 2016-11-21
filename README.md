@@ -26,6 +26,9 @@ docker containers
 -----------------
 A Docker container is a **runnable instance** of a Docker image.
 
+* **start container (detached)**
+
+   _docker start container-name -d
 
 * **run container (detached)**
 
