@@ -21,6 +21,9 @@ A Docker image is a **read-only** and **stateless** template with instructions f
 
    _docker rmi $(docker images -q)_
 
+* **get image from a registry**
+
+   _docker pull imageId_
 
 docker containers
 -----------------
@@ -28,7 +31,7 @@ A Docker container is a **runnable instance** of a Docker image.
 
 * **start container (detached)**
 
-   _docker start container-name -d
+   _docker start container-name_
 
 * **run container (detached)**
 
@@ -57,8 +60,11 @@ A Docker container is a **runnable instance** of a Docker image.
 * **tail container logs**
 
    _docker logs -f container-name_
+   
+* **container info**
 
-
+   _docker inspect container-name_
+   
 dockerfile resources
 --------------------
 
