@@ -64,7 +64,17 @@ A Docker container is a **runnable instance** of a Docker image.
 * **container info**
 
    _docker inspect container-name_
-   
+
+docker compose
+--------------------
+* **build compose**
+
+   _docker-compose build_
+
+* **compose up**
+
+   _docker-compose up (--build)
+
 dockerfile resources
 --------------------
 
