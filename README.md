@@ -55,7 +55,7 @@ A Docker container is a **runnable instance** of a Docker image.
 
 * **enter in some container**
 
-   _docker exec -it container-name sh_
+   _docker exec -it container-name sh/bash_
 
 * **tail container logs**
 
