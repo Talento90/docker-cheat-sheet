@@ -19,7 +19,7 @@ A Docker image is a **read-only** and **stateless** template with instructions f
 
 * **delete all docker images**
 
-   _docker rmi $(docker images -q)_
+   _docker rmi $(docker images -a -q)_
 
 * **get image from a registry**
 
@@ -53,6 +53,11 @@ A Docker container is a **runnable instance** of a Docker image.
 
    _docker rm $(docker ps -a -q)_
 
+* **delete all docker containers and volumes**
+
+   _docker rm -v $(docker ps -a -q)_
+
+
 * **enter in some container**
 
    _docker exec -it container-name sh/bash_
@@ -64,6 +69,18 @@ A Docker container is a **runnable instance** of a Docker image.
 * **container info**
 
    _docker inspect container-name_
+
+docker volumes
+-----------------
+Volumes are designed to persist data, independent of the container’s life cycle.
+
+* **get all volumes**
+
+   _docker volume ps_
+   
+* **delete all volumes**
+
+   _docker volume rm $(docker volume ls -q)_
 
 docker compose
 --------------------
