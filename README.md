@@ -16,6 +16,11 @@ A Docker image is a **read-only** and **stateless** template with instructions f
 * **remove docker image**
 
    _docker rmi node_
+* **remove docker dangling images (with repository and tag as \<none\>)**
+   
+   _docker rmi $(docker images --quiet --filter "dangling=true")_
+   
+   _docker rmi $(docker images -q -f "dangling=true")_
 
 * **delete all docker images**
 
