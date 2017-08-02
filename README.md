@@ -65,7 +65,7 @@ A Docker container is a **runnable instance** of a Docker image. It includes an 
    * **-e** is how you pass environment variables to the container
    * **ENV_KEY** is the environment variabl that you want to pass
    * **-P** will publish all the exposed container ports to random ports on the Docker host
-   * **-p** will expose port 80 inside the container and port 8888 on the host machine (**host machine:container**)
+   * **-p** expose port 80 inside the container and link it with port 8888 on the host machine (**host machine:container**)
 
 * **stop container by id or name**
 
