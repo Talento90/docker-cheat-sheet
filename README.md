@@ -1,5 +1,11 @@
-#docker-cheat-sheet
+# docker-cheat-sheet
 
+Repository that contains my notes related with Docker!
+
+
+Docker daemon
+-------------
+The background service running on the host that manages building, running and distributing Docker containers.
 
 docker images
 -------------
@@ -32,7 +38,7 @@ A Docker image is a **read-only** and **stateless** template with instructions f
 
 docker containers
 -----------------
-A Docker container is a **runnable instance** of a Docker image.
+A Docker container is a **runnable instance** of a Docker image. It includes an application and all of its dependencies. It shares the kernel with other containers, and runs as an isolated process in user space on the host OS.
 
 * **start container (detached)**
 
@@ -95,11 +101,4 @@ docker compose
 
 * **compose up**
 
-   _docker-compose up (--build)
-
-dockerfile resources
---------------------
-
-* **install git**
-
-   alpine: _apk add --no-cache git_
+   _docker-compose up_
