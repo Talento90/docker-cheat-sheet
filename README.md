@@ -3,7 +3,7 @@
 Repository that contains my notes related with Docker!
 
 
-Docker daemon
+docker daemon
 -------------
 The background service running on the host that manages building, running and distributing Docker containers.
 
